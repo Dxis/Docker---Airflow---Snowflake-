@@ -44,20 +44,29 @@ Este DAG é disparado pelo sensor e realiza a ingestão do arquivo JSON no Snowf
 ---
 
 ## 3️⃣ Banco de Dados e Estrutura Snowflake
-
+acesso via dbeaver 
+- MNLTDMC-DL26504.snowflakecomputing.com porta 443
+ 
 - **Database:** `SANDBOXDATA`  
-- **Schema:** `PUBLIC`  
+- **Schema:** `sandboxdata.PUBLIC`  
 - **Tabela principal:** `tblSandbox` (`id_file`, `ds_file`)  
 - **Sequence:** `seq_files_uid` para controle de IDs.
+- **Role:** sandboxdata_role
 
 ### Usuários e permissões
+
+
+ 
+ 
 
 | Usuário             | Senha Exemplo         | Função / Acesso                                    |
 |--------------------|----------------------|--------------------------------------------------|
 | `ANA_SANDBOX`      | `SenhaForteeee123`   | Usuário crud - banco - storage       |
 | `HENRIQUE_SANDBOX` | `Sandboxdata@123`    | Usuário crud - banco - storage   |
 
-> Ambos os usuários possuem acesso ao warehouse `sandboxdata_WH` e ao schema `SANDBOXDATA.PUBLIC`.
+> Ambos os usuários possuem acesso ao warehouse `sandboxdata_WH` e ao schema `SANDBOXDATA.PUBLIC`.>
+> 
+<img width="826" height="597" alt="image" src="https://github.com/user-attachments/assets/737d2bdc-5464-4e57-b140-bbc51d21bd5d" />
 
 ### Warehouse
 
