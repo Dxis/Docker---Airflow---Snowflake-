@@ -35,11 +35,12 @@ Este DAG é disparado pelo sensor e realiza a ingestão do arquivo JSON no Snowf
    - Conecta ao Snowflake.
    - Obtém o próximo ID da sequence `seq_files_uid`.
    - Insere o registro na tabela `tblSandbox` com o nome do arquivo.
-3. Move o arquivo para a pasta `processado` ou `erro`, dependendo do resultado.
+3. Move o arquivo para a pasta `processado` ou `erro`(em dev) , dependendo do resultado.
 4. Mantém controle de IDs usando a sequence, garantindo unicidade.
 
 > **Resumo da ordem:**  
-> O arquivo é processado somente **após o sensor confirmar que ele existe** e disparar este DAG.
+arquivo >> file_name >> id_file >> copy_stage >> mover 
+
 
 ---
 
