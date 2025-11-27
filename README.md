@@ -97,7 +97,8 @@ Acesso BD via Postgress
 
 #testes
 
-![Screenshot_2](https://github.com/user-attachments/assets/2f77aa25-6945-4f43-af65-b374ff7cd9d5)
+<img width="825" height="142" alt="image" src="https://github.com/user-attachments/assets/f2a9d56b-4e5b-4166-a96a-eaeb31dfe264" />
+<img width="846" height="627" alt="image" src="https://github.com/user-attachments/assets/5ad70461-620a-4dcd-87c0-6f049394eb17" />
 
-![Screenshot_3](https://github.com/user-attachments/assets/8e3377cb-be66-4f78-bcf4-c3dc82929857)
+
 
