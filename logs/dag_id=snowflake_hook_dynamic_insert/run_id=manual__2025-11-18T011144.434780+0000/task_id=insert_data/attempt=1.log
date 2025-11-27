@@ -1,0 +1,19 @@
+{"timestamp":"2025-11-18T01:11:52.029591","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-11-18T01:11:52.030262","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/test_Snowflake_v3.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-11-18T01:11:52.460333","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-11-18T01:11:52.483114","level":"info","event":"Connection Retrieved 'snowflake_conn'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-11-18T01:11:52.483615","level":"info","event":"Snowflake Connector for Python Version: 3.15.0, Python Version: 3.12.10, Platform: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36","logger":"snowflake.connector.connection"}
+{"timestamp":"2025-11-18T01:11:52.484306","level":"info","event":"Connecting to GLOBAL Snowflake domain","logger":"snowflake.connector.connection"}
+{"timestamp":"2025-11-18T01:11:53.213514","level":"info","event":"Running statement: INSERT INTO PUBLIC.TBL_EXEMPLO (NOME, VALOR) VALUES ('Produto A', 100), parameters: None","logger":"airflow.task.hooks.airflow.providers.snowflake.hooks.snowflake.SnowflakeHook"}
+{"timestamp":"2025-11-18T01:11:54.603056","level":"info","event":"Rows affected: 1","logger":"airflow.task.hooks.airflow.providers.snowflake.hooks.snowflake.SnowflakeHook"}
+{"timestamp":"2025-11-18T01:11:54.603233","level":"info","event":"Rows affected: 1","logger":"airflow.task.hooks.airflow.providers.snowflake.hooks.snowflake.SnowflakeHook"}
+{"timestamp":"2025-11-18T01:11:54.603371","level":"info","event":"Snowflake query id: 01c07687-0001-4097-0000-000240fae869","logger":"airflow.task.hooks.airflow.providers.snowflake.hooks.snowflake.SnowflakeHook"}
+{"timestamp":"2025-11-18T01:11:55.175765","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-11-18T01:11:55.183887","level":"info","event":"Connection Retrieved 'snowflake_conn'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-11-18T01:11:55.184198","level":"info","event":"Snowflake Connector for Python Version: 3.15.0, Python Version: 3.12.10, Platform: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36","logger":"snowflake.connector.connection"}
+{"timestamp":"2025-11-18T01:11:55.184552","level":"info","event":"Connecting to GLOBAL Snowflake domain","logger":"snowflake.connector.connection"}
+{"timestamp":"2025-11-18T01:11:56.192395","level":"info","event":"Running statement: INSERT INTO PUBLIC.TBL_EXEMPLO (NOME, VALOR) VALUES ('Produto B', 200), parameters: None","logger":"airflow.task.hooks.airflow.providers.snowflake.hooks.snowflake.SnowflakeHook"}
+{"timestamp":"2025-11-18T01:11:57.410438","level":"info","event":"Rows affected: 1","logger":"airflow.task.hooks.airflow.providers.snowflake.hooks.snowflake.SnowflakeHook"}
+{"timestamp":"2025-11-18T01:11:57.410576","level":"info","event":"Rows affected: 1","logger":"airflow.task.hooks.airflow.providers.snowflake.hooks.snowflake.SnowflakeHook"}
+{"timestamp":"2025-11-18T01:11:57.410645","level":"info","event":"Snowflake query id: 01c07687-0001-40e5-0002-40fa000120da","logger":"airflow.task.hooks.airflow.providers.snowflake.hooks.snowflake.SnowflakeHook"}
+{"timestamp":"2025-11-18T01:11:57.987767","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}

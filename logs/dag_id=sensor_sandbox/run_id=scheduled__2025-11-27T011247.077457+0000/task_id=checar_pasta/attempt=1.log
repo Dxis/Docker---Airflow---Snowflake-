@@ -1,0 +1,13 @@
+{"timestamp":"2025-11-27T01:12:47.560695","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-11-27T01:12:47.561109","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/sensor_sandbox.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-11-27T01:12:47.615311Z","level":"info","event":"===== INICIANDO VERIFICAÇÃO DA PASTA =====","chan":"stdout","logger":"task"}
+{"timestamp":"2025-11-27T01:12:47.615748Z","level":"info","event":"Pasta monitorada: /opt/airflow/data","chan":"stdout","logger":"task"}
+{"timestamp":"2025-11-27T01:12:47.616001Z","level":"info","event":"Total de arquivos encontrados: 4","chan":"stdout","logger":"task"}
+{"timestamp":"2025-11-27T01:12:47.616314Z","level":"info","event":"Lista de arquivos: ['erro', 'pre_processado', 'processado', 'recepcionado']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-11-27T01:12:47.616517Z","level":"info","event":"Analisando arquivo: erro","chan":"stdout","logger":"task"}
+{"timestamp":"2025-11-27T01:12:47.616738Z","level":"info","event":"Analisando arquivo: pre_processado","chan":"stdout","logger":"task"}
+{"timestamp":"2025-11-27T01:12:47.616953Z","level":"info","event":"Analisando arquivo: processado","chan":"stdout","logger":"task"}
+{"timestamp":"2025-11-27T01:12:47.617147Z","level":"info","event":"Analisando arquivo: recepcionado","chan":"stdout","logger":"task"}
+{"timestamp":"2025-11-27T01:12:47.617392Z","level":"info","event":">>> ⚠ Nenhum arquivo .json encontrado.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-11-27T01:12:47.617628Z","level":"info","event":"===== FIM DA VERIFICAÇÃO - NADA ENCONTRADO =====","chan":"stdout","logger":"task"}
+{"timestamp":"2025-11-27T01:12:47.588419","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}

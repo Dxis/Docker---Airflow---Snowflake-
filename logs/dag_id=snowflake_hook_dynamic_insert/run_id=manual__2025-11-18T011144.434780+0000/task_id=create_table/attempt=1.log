@@ -1,0 +1,11 @@
+{"timestamp":"2025-11-18T01:11:45.899236","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-11-18T01:11:45.899778","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/test_Snowflake_v3.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-11-18T01:11:48.391676","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-11-18T01:11:48.663987","level":"info","event":"Connection Retrieved 'snowflake_conn'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-11-18T01:11:48.664375","level":"info","event":"Snowflake Connector for Python Version: 3.15.0, Python Version: 3.12.10, Platform: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36","logger":"snowflake.connector.connection"}
+{"timestamp":"2025-11-18T01:11:48.664851","level":"info","event":"Connecting to GLOBAL Snowflake domain","logger":"snowflake.connector.connection"}
+{"timestamp":"2025-11-18T01:11:50.127231","level":"info","event":"Running statement: CREATE TABLE IF NOT EXISTS PUBLIC.TBL_EXEMPLO (\n        ID INT AUTOINCREMENT PRIMARY KEY,\n        NOME STRING,\n        VALOR INT,\n        DT_CRIACAO TIMESTAMP_LTZ DEFAULT CURRENT_TIMESTAMP()\n    );, parameters: None","logger":"airflow.task.hooks.airflow.providers.snowflake.hooks.snowflake.SnowflakeHook"}
+{"timestamp":"2025-11-18T01:11:50.332555","level":"info","event":"Rows affected: 1","logger":"airflow.task.hooks.airflow.providers.snowflake.hooks.snowflake.SnowflakeHook"}
+{"timestamp":"2025-11-18T01:11:50.332690","level":"info","event":"Rows affected: 1","logger":"airflow.task.hooks.airflow.providers.snowflake.hooks.snowflake.SnowflakeHook"}
+{"timestamp":"2025-11-18T01:11:50.332785","level":"info","event":"Snowflake query id: 01c07687-0001-4097-0000-000240fae861","logger":"airflow.task.hooks.airflow.providers.snowflake.hooks.snowflake.SnowflakeHook"}
+{"timestamp":"2025-11-18T01:11:50.763706","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}
