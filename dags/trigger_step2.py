@@ -5,7 +5,7 @@ from airflow.providers.snowflake.hooks.snowflake import SnowflakeHook
 import os
 import shutil
 
-BASE_PATH = "/opt/airflow/data"
+BASE_PATH = "/opt/airflow/data/recepcionado"
 
 with DAG(
     dag_id="trigger_process_json",
@@ -90,29 +90,42 @@ with DAG(
             FROM (
                 SELECT 
                     {id_file} AS id_file,
-                    t.$1 AS RAW_STATUS
-                FROM @~/sandbox_stage/{file_name} t
+                    PARSE_JSON(t.$1) AS RAW_STATUS
+                FROM @SANDBOXDATA.PUBLIC.STORAGE/{file_name} t
             )
-            FILE_FORMAT = (TYPE = 'JSON');
+            FILE_FORMAT = (TYPE = 'JSON')
+            FORCE = TRUE;
         """
 
         hook.run(sql_copy)
         print(">>> COPY INTO tblSandbox_Stage concluído.")
 
     @task
-    def mover_final(arquivo):
-        """Move o arquivo físico para a pasta recepcionado."""
-        src = os.path.join(BASE_PATH, arquivo)
-        dst_dir = os.path.join(BASE_PATH, "processado")
-        os.makedirs(dst_dir, exist_ok=True)
-        dst = os.path.join(dst_dir, arquivo)
+    def mover_final(arquivo: str):
+        """
+        Move o arquivo físico da pasta 'recepcionado' para 'processado'.
+        """
+        print(">>> inicio mover_final")
+        print(f"Insumo: {arquivo}")
 
-        shutil.move(src, dst)
-        print(f">>> Arquivo movido para processado: {dst}")
+        dst =  arquivo.replace("recepcionado", "processado")
 
-    # ------------------ ORQUESTRAÇÃO ------------------
+        print(f">>> Origem: {arquivo}")
+        print(f">>> Destino teste: {dst}")
+
+        if os.path.exists(arquivo):
+            shutil.move(arquivo, dst)
+            print(f">>> Arquivo movido para processado: {dst}")
+        else:
+            print(f"!!! Arquivo não encontrado na origem: {arquivo}")
+
+
+    # Não chamar a função ainda, apenas criar o "wrapper" da task
     arquivo = obter_arquivo()
     file_name = upload_snowflake(arquivo)
     id_file = inserir_tblsandbox(file_name)
-    copy_into_stage(id_file, file_name)
-    mover_final(arquivo)
+    copy_stage = copy_into_stage(id_file, file_name)
+    mover = mover_final(arquivo)
+
+    # Dependências explícitas
+    arquivo >> file_name >> id_file >> copy_stage >> mover

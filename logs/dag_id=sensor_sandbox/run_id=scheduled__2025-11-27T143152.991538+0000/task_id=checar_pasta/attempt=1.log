@@ -1,0 +1,7 @@
+{"timestamp":"2025-11-27T14:31:53.992935","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-11-27T14:31:53.993334","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/sensor_sandbox.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-11-27T14:31:54.030332Z","level":"info","event":"===== INICIANDO VERIFICAÇÃO DA PASTA =====","chan":"stdout","logger":"task"}
+{"timestamp":"2025-11-27T14:31:54.030793Z","level":"info","event":"Pasta monitorada: /opt/airflow/data","chan":"stdout","logger":"task"}
+{"timestamp":"2025-11-27T14:31:54.031099Z","level":"info","event":"Arquivos encontrados: ['erro', 'pre_processado', 'processado', 'recepcionado']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-11-27T14:31:54.031362Z","level":"info","event":">>> ⚠ Nenhum arquivo JSON encontrado.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-11-27T14:31:54.008768","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}

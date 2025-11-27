@@ -1,0 +1,7 @@
+{"timestamp":"2025-11-27T14:06:15.159829","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-11-27T14:06:15.160219","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/sensor_sandbox.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-11-27T14:06:15.190408Z","level":"info","event":">>> VALIDAÇÃO — arquivo encontrado? False","chan":"stdout","logger":"task"}
+{"timestamp":"2025-11-27T14:06:15.190878","level":"info","event":"Done. Returned value was: False","logger":"airflow.task.operators.airflow.providers.standard.operators.python.ShortCircuitOperator"}
+{"timestamp":"2025-11-27T14:06:15.191042","level":"info","event":"Condition result is False","logger":"airflow.task.operators.airflow.providers.standard.operators.python.ShortCircuitOperator"}
+{"timestamp":"2025-11-27T14:06:15.191118","level":"info","event":"Skipping downstream tasks","logger":"airflow.task.operators.airflow.providers.standard.operators.python.ShortCircuitOperator"}
+{"timestamp":"2025-11-27T14:06:15.191333","level":"info","event":"Skipping downstream tasks.","logger":"task"}

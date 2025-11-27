@@ -1,0 +1,12 @@
+{"timestamp":"2025-11-27T14:31:49.402576","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-11-27T14:31:49.403157","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/trigger_step2.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-11-27T14:31:50.035992","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-11-27T14:31:50.049975","level":"info","event":"Connection Retrieved 'snowflake_sandboxdata_conn'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-11-27T14:31:50.050350","level":"info","event":"Snowflake Connector for Python Version: 3.15.0, Python Version: 3.12.10, Platform: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36","logger":"snowflake.connector.connection"}
+{"timestamp":"2025-11-27T14:31:50.050771","level":"info","event":"Connecting to GLOBAL Snowflake domain","logger":"snowflake.connector.connection"}
+{"timestamp":"2025-11-27T14:31:50.877129","level":"info","event":"Running statement: COPY INTO public.tblSandbox_Stage\n            FROM (\n                SELECT \n                    49 AS id_file,\n                    PARSE_JSON(t.$1) AS RAW_STATUS\n                FROM @SANDBOXDATA.PUBLIC.STORAGE/Teste_20251126.json t\n            )\n            FILE_FORMAT = (TYPE = 'JSON')\n            FORCE = TRUE;, parameters: None","logger":"airflow.task.hooks.airflow.providers.snowflake.hooks.snowflake.SnowflakeHook"}
+{"timestamp":"2025-11-27T14:31:51.932571","level":"info","event":"Rows affected: 1","logger":"airflow.task.hooks.airflow.providers.snowflake.hooks.snowflake.SnowflakeHook"}
+{"timestamp":"2025-11-27T14:31:51.932713","level":"info","event":"Rows affected: 1","logger":"airflow.task.hooks.airflow.providers.snowflake.hooks.snowflake.SnowflakeHook"}
+{"timestamp":"2025-11-27T14:31:51.932783","level":"info","event":"Snowflake query id: 01c0ac47-0001-4766-0002-40fa0006267a","logger":"airflow.task.hooks.airflow.providers.snowflake.hooks.snowflake.SnowflakeHook"}
+{"timestamp":"2025-11-27T14:31:52.530410Z","level":"info","event":">>> COPY INTO tblSandbox_Stage concluído.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-11-27T14:31:52.530463","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator"}

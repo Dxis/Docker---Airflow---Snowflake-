@@ -1,0 +1,6 @@
+{"timestamp":"2025-11-27T14:23:39.139822","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-11-27T14:23:39.140218","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/trigger_step2.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-11-27T14:23:39.610606Z","level":"info","event":">>> Origem: /opt/airflow/data/recepcionado/Teste_20251126.json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-11-27T14:23:39.611143Z","level":"info","event":">>> Destino: /opt/airflow/data/recepcionado/Teste_20251126.json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-11-27T14:23:39.611457Z","level":"info","event":">>> Arquivo movido para processado: /opt/airflow/data/recepcionado/Teste_20251126.json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-11-27T14:23:39.585473","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator"}

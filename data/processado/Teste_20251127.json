@@ -1,0 +1,99 @@
+{
+  "pessoas": [
+    {
+      "nome": "Diego",
+      "idade": 35,
+      "profissao": "Engenheiro de Dados",
+      "contatos": {
+        "email": "diegoalex@example.com",
+        "telefone": "+55 11 91234-5678"
+      },
+      "endereco": {
+        "rua": "Av. Paulista",
+        "numero": 1000,
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "cep": "01310-100"
+      },
+      "filhos": [
+        {
+          "nome": "Aurora",
+          "idade": 2,
+          "genero": "Feminino"
+        }
+      ],
+      "hobbies": ["futebol", "jogos de tabuleiro", "programação"]
+    },
+    {
+      "nome": "Ana",
+      "idade": 32,
+      "profissao": "Designer Gráfico",
+      "contatos": {
+        "email": "ana.designer@example.com",
+        "telefone": "+55 21 99876-5432"
+      },
+      "endereco": {
+        "rua": "Rua das Laranjeiras",
+        "numero": 500,
+        "cidade": "Rio de Janeiro",
+        "estado": "RJ",
+        "cep": "22240-003"
+      },
+      "filhos": [],
+      "hobbies": ["pintura", "viagens", "fotografia"]
+    },
+    {
+      "nome": "Felipe",
+      "idade": 28,
+      "profissao": "Analista de Sistemas",
+      "contatos": {
+        "email": "felipe.sys@example.com",
+        "telefone": "+55 31 98765-4321"
+      },
+      "endereco": {
+        "rua": "Rua do Mercado",
+        "numero": 250,
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "cep": "30190-140"
+      },
+      "filhos": [
+        {
+          "nome": "Lucas",
+          "idade": 5,
+          "genero": "Masculino"
+        },
+        {
+          "nome": "Sofia",
+          "idade": 3,
+          "genero": "Feminino"
+        }
+      ],
+      "hobbies": ["corrida", "video games", "cinema"]
+    },
+    {
+      "nome": "Henrique",
+      "idade": 40,
+      "profissao": "Médico",
+      "contatos": {
+        "email": "henrique.med@example.com",
+        "telefone": "+55 41 91234-9876"
+      },
+      "endereco": {
+        "rua": "Alameda Santos",
+        "numero": 1200,
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "cep": "80420-120"
+      },
+      "filhos": [
+        {
+          "nome": "Mariana",
+          "idade": 10,
+          "genero": "Feminino"
+        }
+      ],
+      "hobbies": ["leitura", "trilha", "cozinha"]
+    }
+  ]
+}
