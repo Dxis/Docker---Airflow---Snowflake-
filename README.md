@@ -76,3 +76,13 @@ Este DAG é disparado pelo sensor e realiza a ingestão do arquivo JSON no Snowf
 - Permissões e roles são configuradas para que cada usuário tenha apenas o acesso necessário.
 
 ---
+
+Acesso BD via Postgress 
+
+
+
+<img width="1146" height="718" alt="image" src="https://github.com/user-attachments/assets/8d8fc17a-08c2-450c-8568-240d412c3195" />
+
+<img width="1113" height="568" alt="image" src="https://github.com/user-attachments/assets/16ba2c5f-62b7-4655-b99e-ba84df9f8e85" />
+
+
