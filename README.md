@@ -1,9 +1,77 @@
-# Projeto Airflow + Snowflake
+# 🚀 Projeto Airflow + Snowflake
 
-Este projeto demonstra um pipeline de ingestão de arquivos JSON para o Snowflake utilizando **Apache Airflow**.  
-O fluxo do projeto envolve dois DAGs principais:
+## Pipeline moderno de ingestão de arquivos JSON utilizando Apache Airflow, Docker e Snowflake.
+
+O fluxo foi construído utilizando DAGs desacopladas, permitindo:
+
+✅ Monitoramento contínuo de arquivos</br>
+✅ Disparo automático de processamento</br>
+✅ Controle de execução via sequences</br>
+✅ Separação entre ingestão e orquestração</br>
+✅ Estrutura preparada para escalabilidade</br>
 
 ---
+
+# ⚙️ Tecnologias Utilizadas
+
+| Tecnologia     | Finalidade                    |
+| -------------- | ----------------------------- |
+| Docker         | Containerização               |
+| Apache Airflow | Orquestração de workflows     |
+| Snowflake      | Data Warehouse em nuvem       |
+| PostgreSQL     | Banco de metadados do Airflow |
+| Redis          | Broker do Celery              |
+| Python         | Desenvolvimento dos pipelines |
+| DBeaver        | Administração e consultas SQL |
+
+---
+
+# 📂 Estrutura do Projeto
+
+```bash
+.
+├── dags/
+│   ├── sensor_sandbox.py
+│   ├── trigger_process_json.py
+│
+├── data/
+│   ├── processado/
+│   ├── erro/
+│
+├── logs/
+├── plugins/
+├── docker-compose.yaml
+├── requirements.txt
+└── README.md
+```
+
+---
+# 🏗️ Arquitetura da Solução
+
+```text
+                +----------------------+
+                | Pasta Monitorada     |
+                | /opt/airflow/data    |
+                +----------+-----------+
+                           |
+                           v
+                +----------------------+
+                | DAG Sensor           |
+                | sensor_sandbox       |
+                +----------+-----------+
+                           |
+                           v
+                +----------------------+
+                | DAG Processamento    |
+                | trigger_process_json |
+                +----------+-----------+
+                           |
+                           v
+                +----------------------+
+                | Snowflake            |
+                | tblSandbox           |
+                +----------------------+
+```
 
 ## 1️⃣ DAG Sensor: `sensor_sandbox`
 
@@ -57,9 +125,6 @@ acesso via dbeaver
 ### Usuários e permissões
 
 
- 
- 
-
 | Usuário             | Senha Exemplo         | Função / Acesso                                    |
 |--------------------|----------------------|--------------------------------------------------|
 | `ANA_SANDBOX`      | `SenhaForteeee123`   | Usuário crud - banco - storage       |
@@ -87,19 +152,102 @@ acesso via dbeaver
 
 ---
 
-Acesso BD via Postgress 
-
-
-
+### Acesso BD via Postgress 
 <img width="1146" height="718" alt="image" src="https://github.com/user-attachments/assets/8d8fc17a-08c2-450c-8568-240d412c3195" />
 
 <img width="1113" height="568" alt="image" src="https://github.com/user-attachments/assets/16ba2c5f-62b7-4655-b99e-ba84df9f8e85" />
 
 
-#testes
+# Testes e Validações
+
+O projeto possui cenários de validação para:
+
+✅ Identificação automática de arquivos </br>
+✅ Disparo entre DAGs </br>
+✅ Inserção no Snowflake </br>
+✅ Controle de IDs únicos </br>
+✅ Movimentação de arquivos processados </br>
+✅ Tratamento de falhas </br>
 
 <img width="825" height="142" alt="image" src="https://github.com/user-attachments/assets/f2a9d56b-4e5b-4166-a96a-eaeb31dfe264" />
 <img width="846" height="627" alt="image" src="https://github.com/user-attachments/assets/5ad70461-620a-4dcd-87c0-6f049394eb17" />
+
+---
+
+# 📈 Evoluções Futuras
+
+Próximas melhorias planejadas:
+
+* Integração com dbt
+* CI/CD para DAGs
+* Monitoramento avançado
+* Data Quality
+* Integração com APIs
+* Processamento incremental
+* Alertas automatizados
+* Observabilidade de pipelines
+
+---
+
+# 💼 Contexto Profissional
+
+Este projeto representa parte da minha atuação prática em:
+
+* Engenharia de Dados
+* Desenvolvimento ETL/ELT
+* Governança de Dados
+* Arquitetura de Dados
+* Automação de Processos
+* Cloud Data Platforms
+* Workflow Orchestration
+
+Mais do que um desafio técnico, o objetivo foi criar uma estrutura reutilizável, escalável e alinhada às práticas modernas de Engenharia de Dados.
+
+---
+
+# 👨‍💻 Sobre Mim
+
+Profissional sênior com experiência em:
+
+* Engenharia de Dados
+* Arquitetura e Governança de Dados
+* Big Data
+* Automação de Processos
+* ETL/ELT
+* Gestão de Projetos
+* Liderança Técnica
+
+Com foco em criar soluções escaláveis, eficientes e automatizadas.
+
+---
+
+# 🔗 Contato
+
+## GitHub
+
+[https://github.com/Dxis](https://github.com/Dxis)
+
+## LinkedIn
+
+[LinkedIn.](https://www.linkedin.com/in/diego-assis-02153238/)
+
+---
+
+# ⭐ Considerações Finais
+
+### Este projeto foi desenvolvido inicialmente como desafio técnico para entrevista e posteriormente evoluído como projeto de portfólio, demonstrando conhecimentos em:
+
+* Engenharia de Dados
+* Orquestração de pipelines
+* Processamento automatizado de arquivos
+* Integração com Snowflake
+* Arquitetura ETL/ELT
+* Dockerização de ambientes
+* Governança e controle de processamento
+
+Este projeto continua em evolução como parte do meu portfólio profissional e estudos em Engenharia de Dados moderna.
+
+Sugestões, melhorias e feedbacks são sempre bem-vindos.
 
 
 
